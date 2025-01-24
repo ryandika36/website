@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML & CSS</title>
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #89cff0, #f4f4f9);
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #0077cc;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .code-box {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #0077cc;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 1em;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #005fa3;
+        }
+        .interactive {
+            background: #eef;
+            padding: 20px;
+            border: 2px dashed #0077cc;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Belajar HTML & CSS</h1>
+        </header>
+        <section>
+            <h2>Apa itu HTML?</h2>
+            <p>HTML (HyperText Markup Language) digunakan untuk membangun struktur dasar sebuah halaman web.</p>
+            <h3>Contoh Kode HTML:</h3>
+            <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Belajar HTML&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Halo Dunia!&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Ini paragraf pertama saya.&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+            </div>
+
+            <h2>Apa itu CSS?</h2>
+            <p>CSS (Cascading Style Sheets) digunakan untuk mempercantik dan mengatur tampilan halaman web.</p>
+            <h3>Contoh Kode CSS:</h3>
+            <div class="code-box">
+body {<br>
+&nbsp;&nbsp;background-color: #f4f4f9;<br>
+&nbsp;&nbsp;color: #333;<br>
+&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+}<br><br>
+h1 {<br>
+&nbsp;&nbsp;color: #0077cc;<br>
+&nbsp;&nbsp;text-align: center;<br>
+}
+            </div>
+
+            <h2>Praktik Interaktif</h2>
+            <p>Klik tombol di bawah ini untuk melihat contoh langsung HTML dan CSS bekerja bersama:</p>
+            <button onclick="showExample()">Tampilkan Contoh</button>
+            <div id="example" class="interactive" style="display: none;">
+                <h1>Halo Dunia!</h1>
+                <p>Ini adalah contoh elemen HTML dengan styling CSS.</p>
+                <p style="color: blue;">Teks ini memiliki warna biru yang diatur oleh CSS langsung di elemen.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showExample() {
+            const example = document.getElementById("example");
+            example.style.display = "block";
+        }
+    </script>
+</body>
+</html>
